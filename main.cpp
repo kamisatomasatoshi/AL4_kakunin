@@ -2,7 +2,7 @@
 #include"Vector2.h"
 #include<cmath>
 
-bool CheckLine2Circle(Vector2& lineStart, Vector2& lineEnd, Vector2& circle, int circleR);
+bool isCheck(Vector2& lineStart, Vector2& lineEnd, Vector2& circle, int circleR);
 
 // ウィンドウのタイトルに表示する文字列
 const char TITLE[] = "AL4";
@@ -95,7 +95,7 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 			lineEnd.x += 10;
 		}
 
-		hitFulg = CheckLine2Circle(lineStart, lineEnd, circle, circleR);
+		hitFulg = isCheck(lineStart, lineEnd, circle, circleR);
 
 
 		// 描画処理
@@ -134,7 +134,7 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	return 0;
 }
 
-bool CheckLine2Circle(Vector2& lineStart, Vector2& lineEnd, Vector2& circle, int circleR)
+bool isCheck(Vector2& lineStart, Vector2& lineEnd, Vector2& circle, int circleR)
 {
 	Vector2 lineVec = lineEnd - lineStart;
 
